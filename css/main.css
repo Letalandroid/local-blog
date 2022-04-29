@@ -1,0 +1,41 @@
+:root {
+    --color-primary: #0000b7;
+    --color-secundary: #ff0;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    color: var(--color-secundary);
+    padding: 20px;
+    background-color: var(--color-primary);
+    text-decoration: underline;
+}
+
+.add {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 60px;
+    height: 60px;
+    background-color: var(--color-primary);
+    border-radius: 50%;
+}
+
+.add:hover {
+    background-color: #3d3dbb;
+    box-shadow: 3px 3px 5px 0px #000a;
+    transition: all .5s;
+}
+
+i {
+   color: var(--color-secundary);
+   font-size: 1.25em;
+}
