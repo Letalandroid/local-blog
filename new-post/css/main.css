@@ -15,27 +15,64 @@ header {
     text-decoration: underline;
 }
 
-.add {
+main {
+    height: calc(100vh - 77px);
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    cursor: pointer;
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    width: 60px;
-    height: 60px;
-    background-color: var(--color-primary);
-    border-radius: 50%;
 }
 
-.add:hover {
-    background-color: #3d3dbb;
+form {
+    position: relative;
+}
+
+p {
+    display: flex;
+    flex-direction: column;
+    font-size: 2em;
+}
+
+label {
+    margin-bottom: 10px;
+}
+
+#title {
+    width: 30em;
+    height: 1em;
+    font-size: 16px;
+    padding: 10px;
+    margin-bottom: 30px;
+    outline: 2.5px solid var(--color-primary);
+    border: none;
+    border-radius: 2.5px;
+}
+
+#desc {
+    width: 30em;
+    height: 10em;
+    font-size: 16px;
+    padding: 10px;
+    resize: none;
+    outline: 2.5px solid var(--color-primary);
+    border: none;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+#send {
+    cursor: pointer;
+    border: none;
+    outline: none;
+    background-color: var(--color-secundary);
+    padding: 10px 20px;
+    border-radius: 7.5px;
+    position: absolute;
+    right: 0;
+    font-size: 16px;
+}
+
+#title:focus, #desc:focus, #send:hover, #send:focus {
     box-shadow: 3px 3px 5px 0px #000a;
     transition: all .5s;
-}
-
-i {
-   color: var(--color-secundary);
-   font-size: 1.25em;
 }
