@@ -7,7 +7,7 @@ document.querySelector(".add").addEventListener ("click", () => {
 
 for (let i = 0; i <= JSON.parse(localStorage.getItem("titles")).length - 1; i++) {
 
-    const blog = document.createElement("section");
+    const blog = document.createElement("article");
 
     blog.innerHTML = `
 
