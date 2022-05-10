@@ -8,7 +8,29 @@
     padding: 0;
 }
 
+body {
+    transition: .15s background;
+}
+
+body::-webkit-scrollbar {
+    -webkit-appearance: none;
+    background-color: transparent;
+}
+
+body::-webkit-scrollbar:vertical {
+    width:10px;
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: #797979;
+    border-radius: 20px;
+    border: 2px solid #f1f2f3;
+}
+
 header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     color: var(--color-secundary);
     padding: 20px;
     background-color: var(--color-primary);
@@ -35,7 +57,73 @@ header {
     transition: all .5s;
 }
 
-i {
+em {
    color: var(--color-secundary);
    font-size: 1.25em;
+}
+
+main {
+    margin-top: 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+section {
+    width: 80%;
+    padding: 40px 20px;
+    box-shadow: 3px 3px 5px 0px #000a;
+    margin: 20px 0;
+    transition: .15s background-color;
+}
+
+section > h2 {
+    margin-bottom: 10px;
+    font-size: 2.5em;
+    transition: .15s color;
+}
+
+section > p {
+    margin-top: 20px;
+    font-size: 22px;
+    transition: .15s color;
+}
+
+hr {
+    border: 1px solid #444;
+    transition: .15s border-color;
+}
+
+#dark-mode {
+    appearance: none;
+    cursor: pointer;
+    width: 60px;
+    height: 35px;
+    background-color: var(--color-secundary);
+    outline: 2.5px solid var(--color-secundary);
+    border-radius: 20px;
+    transition: all .5s;
+}
+
+#dark-mode::before {
+    content: '☀️';
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    position: relative;
+    width: 35px;
+    height: 35px;
+    background-color: var(--color-primary);
+    border-radius: 50%;
+}
+
+#dark-mode:checked {
+    background-color: var(--color-secundary);
+}
+
+#dark-mode:checked::before {
+    content: '🌙';
+    right: -25px;
+    background-color: var(--color-primary);
 }
