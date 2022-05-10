@@ -7,7 +7,7 @@ document.querySelector(".add").addEventListener ("click", () => {
 
 for (let i = 0; i <= JSON.parse(localStorage.getItem("titles")).length - 1; i++) {
 
-    const blog = document.createElement("section");
+    const blog = document.createElement("article");
 
     blog.innerHTML = `
 
@@ -29,8 +29,8 @@ document.getElementById("dark-mode").addEventListener("change", () => {
 
         for (let i = 0; i <= JSON.parse(localStorage.getItem("titles")).length - 1; i++) {
 
-            document.querySelectorAll("section")[i].style.backgroundColor = "#fff";
-            document.querySelectorAll("section")[i].style.boxShadow = "3px 3px 5px 0px #000a";
+            document.querySelectorAll("article")[i].style.backgroundColor = "#fff";
+            document.querySelectorAll("article")[i].style.boxShadow = "3px 3px 5px 0px #000a";
             document.querySelectorAll("h2")[i].style.color = "#000";
             document.querySelectorAll("p")[i].style.color = "#000";
             document.querySelectorAll("hr")[i].style.border = "1px solid #444";
@@ -43,8 +43,8 @@ document.getElementById("dark-mode").addEventListener("change", () => {
 
         for (let i = 0; i <= JSON.parse(localStorage.getItem("titles")).length - 1; i++) {
 
-            document.querySelectorAll("section")[i].style.backgroundColor = "#282828";
-            document.querySelectorAll("section")[i].style.boxShadow = "3px 3px 5px 0px #fffa";
+            document.querySelectorAll("article")[i].style.backgroundColor = "#282828";
+            document.querySelectorAll("article")[i].style.boxShadow = "3px 3px 5px 0px #fffa";
             document.querySelectorAll("h2")[i].style.color = "#fff";
             document.querySelectorAll("p")[i].style.color = "#fff";
             document.querySelectorAll("hr")[i].style.border = "1px solid #fff";
