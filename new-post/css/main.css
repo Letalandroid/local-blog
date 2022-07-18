@@ -23,7 +23,7 @@ header {
 }
 
 main {
-    height: calc(100vh - 77px);
+    height: calc(100vh - 77.6px);
     display: flex;
     flex-direction: column;
     justify-content: center;
